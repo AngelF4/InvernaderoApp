@@ -28,6 +28,7 @@ struct SensorCard: View {
         .padding()
         .background(Color(.systemBackground))
         .clipShape(RoundedRectangle(cornerRadius: 13))
+        
     }
 }
 

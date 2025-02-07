@@ -11,9 +11,8 @@ import SwiftUI
 struct InvernaderoApp: App {
     var body: some Scene {
         WindowGroup {
-            NavigationStack {
                 ContentView()
-            }
+
             
         }
     }

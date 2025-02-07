@@ -1,18 +1,31 @@
-//
-//  PlantsView.swift
-//  Invernadero
-//
-//  Created by Angel HG on 01/02/25.
-//
-
 import SwiftUI
 
+
+
 struct PlantsView: View {
+    let namespace: Namespace.ID // Se recibe aquí
+    
     var body: some View {
-        Text("Plantas")
+        
+        ScrollView {
+            VStack(spacing: 15) {
+                ForEach(plants) { plant in
+                    PlantCard(plant: plant, namespace: namespace)
+                }
+            }
+            .padding()
+        }
+        .background(Color(.systemGray6))
+        .navigationTitle("Plantas")
     }
 }
 
+
+
+
 #Preview {
-    PlantsView()
+     @Previewable @Namespace var namespace
+    NavigationStack {
+        PlantsView(namespace: namespace)
+    }
 }
